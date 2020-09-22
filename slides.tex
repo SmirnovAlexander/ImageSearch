@@ -33,6 +33,7 @@
 
 \begin{document}
 
+
 \begin{frame}
 	\titlepage{}
 \end{frame}
@@ -40,7 +41,6 @@
 
 \begin{frame}
 	\frametitle{Задача}
-
 
 	\begin{itemize}
 		\item Поиск по изображениям
@@ -55,15 +55,7 @@
 		\includegraphics[width=0.4\textwidth]{./images/query_sample.png}
 		\centering
 	\end{figure}
-
-
-
-
 \end{frame}
-
-
-
-
 
 
 \begin{frame}
@@ -74,7 +66,6 @@
 		\item Можно заранее выделить признаки из базы изображений
 	\end{itemize}
 \end{frame}
-
 
 
 \begin{frame}
@@ -88,11 +79,6 @@
 		\item Среднее значение по цветам
 	\end{itemize}
 \end{frame}
-
-
-
-
-
 
 
 \begin{frame}
@@ -111,11 +97,6 @@
 \end{frame}
 
 
-
-
-
-
-
 \begin{frame}
 	\frametitle{Дерево квадрантов}
 
@@ -125,10 +106,7 @@
 		\hfill
 		\subfloat{\includegraphics[width=0.4\textwidth]{./images/quadtree_picture.png}}
 	\end{figure}
-
 \end{frame}
-
-
 
 
 \begin{frame}
@@ -147,9 +125,6 @@
 \end{frame}
 
 
-
-
-
 \begin{frame}
 	\frametitle{Гистограммы тона и насыщенности}
 
@@ -157,8 +132,6 @@
 		\includegraphics[width=0.7\textwidth]{./images/hue_saturation.png}
 		\centering
 	\end{figure}
-
-
 \end{frame}
 
 
@@ -176,17 +149,16 @@
 					            -1 & 0 & 1
 				            \end{matrix}$$
 
-                        $$s_{y}=\begin{matrix}
+			            $$s_{y}=\begin{matrix}
 
-					            -1 & -2 & -1 \\
-					             \phantom{-}0 & \phantom{-}0 & \phantom{-}0  \\
-					             \phantom{-}1 & \phantom{-}2 & \phantom{-}1
+					            -1           & -2           & -1           \\
+					            \phantom{-}0 & \phantom{-}0 & \phantom{-}0 \\
+					            \phantom{-}1 & \phantom{-}2 & \phantom{-}1
 				            \end{matrix}$$
 		      \end{itemize}
 		\item Сравниваем вектора границ
 	\end{itemize}
 \end{frame}
-
 
 
 \begin{frame}
@@ -201,7 +173,6 @@
 \end{frame}
 
 
-
 \begin{frame}
 	\frametitle{Дробление на части}
 
@@ -212,16 +183,45 @@
 \end{frame}
 
 
-
 \begin{frame}
 	\frametitle{Дробление на части}
 
-    \begin{figure}[h]
-        \includegraphics[width=0.7\textwidth]{./images/spartial.png}
-        \centering
-    \end{figure}
+	\begin{figure}[h]
+		\includegraphics[width=0.7\textwidth]{./images/spartial.png}
+		\centering
+	\end{figure}
 \end{frame}
 
+
+\begin{frame}
+	\frametitle{Однородноть}
+
+	\begin{itemize}
+		\item Изменения в интенсивности цвета
+	\end{itemize}
+
+
+	\begin{figure}[h]
+		\includegraphics[width=0.5\textwidth]{./images/heter.jpg}
+		\centering
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Сегментация}
+
+	\begin{itemize}
+		\item Разделение на сегменты
+		\item Выделение фона
+	\end{itemize}
+
+
+	\begin{figure}[h]
+		\includegraphics[width=0.5\textwidth]{./images/segm.jpg}
+		\centering
+	\end{figure}
+\end{frame}
 
 
 \begin{frame}
@@ -229,17 +229,13 @@
 
 	\begin{itemize}
 		\item Свёрточная нейронная сеть для выделения признаков
-            \begin{itemize}
-                \item путем демонстрации алгоритму множества размеченных данных мы хотим подобрать коэффиценты так, чтобы вектора признаков похожих изображений находились рядом в пространстве признаков
-            \end{itemize}
+		      \begin{itemize}
+			      \item принимает вектор изображения, возвращает вектор признаков
+			      \item путем демонстрации алгоритму множества размеченных данных мы хотим подобрать коэффиценты так, чтобы вектора признаков похожих изображений находились рядом в пространстве признаков
+		      \end{itemize}
 		\item Сравниваем расстояние между вектором признаков искомого изображения и остальных изображений
 	\end{itemize}
 \end{frame}
-
-
-
-
-
 
 
 \end{document}
